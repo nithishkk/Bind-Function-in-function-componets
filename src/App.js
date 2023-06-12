@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 export default function App() {
-  const[value,setValue]=React.useState("")
+  const[value,setValue]=React.useState(1)
   const  handleClick=(param)=>{
     setValue(param)
 
@@ -15,7 +15,7 @@ export default function App() {
     <div>
       <h1>Hello StackBlitz!  {value}</h1>
       <p>Start editing to see some magic happen :)</p>
-      <button onClick={() => handleButtonClick('Hello')}>
+      <button onClick={() => handleButtonClick((prev)=>prev+1)}>
         Click me with dynamic binding
       </button>
     </div>
